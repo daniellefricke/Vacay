@@ -1,33 +1,30 @@
 var mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost/vacay');
 
-var BlogSchema = new mongoose.Schema(
-  {
-    title: String,
-    traveler: String,
-    country: String,
-    when: String,
-    bookingInfo: String,
-    activityInfo: String,
-    rentalInfo: String,
-    foodInfo: String,
-    additionalInfo: String,
-    images: []
-  })
-
 var CommentSchema = new mongoose.Schema(
   {
     comment: String,
-    name: String,
-    reviews: [BlogSchema]
+    name: String
   })
+
+  var BlogSchema = new mongoose.Schema(
+    {
+      title: String,
+      traveler: String,
+      country: String,
+      when: String,
+      bookingInfo: String,
+      activityInfo: String,
+      rentalInfo: String,
+      foodInfo: String,
+      additionalInfo: String,
+      images: [],
+      comments: [CommentSchema]
+
+    })
 
   mongoose.model("Blog", BlogSchema);
   mongoose.model("Comment", CommentSchema);
-
-
-
-
 
 
   // Now that we're connected, let's save that connection to the database in a variable.
@@ -42,9 +39,5 @@ var CommentSchema = new mongoose.Schema(
   db.once('open', () => {
     console.log("database has been connected!");
   });
-
-
-
-
 
   module.exports = mongoose;

@@ -1,13 +1,17 @@
+
+
+
 var mongoose = require("./schema");
 
-var Blog = mongoose.model("Blog");
 var Comment = mongoose.model("Comment");
+var Blog = mongoose.model("Blog");
 
 Blog.remove({}, function(err){
-  console.log(err)
+  console.log(err?err:"")
 });
 
 Comment.remove({}, function(err){
+  console.log("such remove");
   console.log(err)
 });
 
@@ -20,13 +24,28 @@ var comment2 = new Comment({comment:"Your vacation looks awesome!", name:"Bethan
 var blogs = [blog1, blog2]
 var comments = [comment1, comment2]
 
+// let successCount = 0
 blogs.forEach((blog, i) => {
   blog.comments.push(comments[i], comments[i+1])
-  blog.save((err,post) => {
-    if (err){
-      console.log(err)
-    } else {
-      console.log(post);
-    }
-  })
+  // blog.save((err,blog) => {
+  //   if (err){
+  //     console.log(`err was ${err}`);
+  //   } else {
+  //     console.log("" + blog.title + " saved successfully. " + ++successCount + " saves thus far");
+  //   }
+  // })
 })
+
+
+Blog.remove({}).then(function(){
+  Blog.collection.insert(blogs).then(function(res){
+    console.log(res);
+    process.exit();
+  });
+});
+
+Comment.remove({}).then(function(){
+  Comment.collection.insert(seedData).then(function(){
+    process.exit();
+  });
+});
