@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './App.css';
+import BlogIndex from './components/BlogIndex.js'
+import BlogShow from './components/BlogShow.js'
+import About from './components/About.js'
 
 import {
   BrowserRouter as Router,
@@ -15,7 +18,7 @@ constructor(props) {
   super(props)
   this.state = {
     blogs: []
-}
+  }
 }
 
 componentDidMount(){
@@ -30,8 +33,16 @@ componentDidMount(){
         return (
           <Router>
             <div>
-              <h1>Hello World</h1>
-            </div>
+                <nav>
+                  <div className="nav-item"><Link to="/">Home</Link></div>
+                  <div className="nav-item"><Link to="/about">About Vacay</Link></div>
+                  <div className="nav-item"><Link to="/create">Create a Blog Post</Link></div>
+                </nav>
+              <div className="main">
+            <Route exact path="/" render={() => <BlogIndex blogs={this.state.blogs} />} />
+            <Route path="/about" component={About} />
+          </div>
+        </div>
           </Router>
       );
     }
