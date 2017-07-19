@@ -2,12 +2,14 @@ const express = require('express')
 const app = express()
 let mongoose = require('./db/schema.js')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 let Blog = mongoose.model("Blog")
 let Comment = mongoose.model("Comment")
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(cors())
 
 app.get(`/api/blogs`, function(req, res){
   Blog.find({}).then(function(blogs){
