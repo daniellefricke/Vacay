@@ -3,7 +3,6 @@ import axios from 'axios'
 import './App.css';
 import BlogIndex from './components/BlogIndex.js'
 import BlogShow from './components/BlogShow.js'
-import About from './components/About.js'
 
 import {
   BrowserRouter as Router,
@@ -33,15 +32,19 @@ componentDidMount(){
         return (
           <Router>
             <div>
-                <nav>
-                  <div className="nav-item"><Link to="/">Home</Link></div>
-                  <div className="nav-item"><Link to="/about">About Vacay</Link></div>
+                <nav className='navClass'>
+                  <div className="nav-item"><Link to="/"><img src="./images/logo-short-short.png"></img></Link></div>
                   <div className="nav-item"><Link to="/create">Create a Blog Post</Link></div>
                 </nav>
-              <div className="main">
+
+          <div className="main">
             <Route exact path="/" render={() => <BlogIndex blogs={this.state.blogs} />} />
-            <Route path="/about" component={About} />
+            <Route path="/blogs/:id" component={BlogShow} />
           </div>
+          <footer>
+            <hr className="featurette-divider"/>
+            <p>Vacay | 2017</p>
+          </footer>
         </div>
           </Router>
       );

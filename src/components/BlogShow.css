@@ -1,0 +1,19 @@
+.eachBlogShow{
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+  border: 2px solid teal;
+}
+
+h2{
+  color: teal;
+}
+
+
+
+.blogDetails {
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 20px;
+}

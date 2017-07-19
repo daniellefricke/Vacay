@@ -22,3 +22,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navClass a{
+  color: white;
+  text-decoration: underline;
+}
+
+h1{
+  font-family: 'Architects Daughter', cursive;
+}
+
+h2{
+  font-family: 'Architects Daughter', cursive;
+}
+
+img{
+  width: 300px;
+}
+a{
+  text-decoration: underline;
+  color: teal;
+}
+nav{
+  width: 100%;
+  background-color: #5271ff;
+  display: inline-block;
+  text-align: center;
+
+}

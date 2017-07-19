@@ -1,0 +1,27 @@
+body{
+  text-align: center;
+}
+
+img{
+  width: 50%;
+}
+
+.blogcontainer{
+  width: 80%;
+  padding: 20px;
+  border: 2px solid teal;
+  margin: auto;
+}
+
+.blogcontainer a{
+  color: rgb(82,113,255);
+}
+
+.about{
+  margin: auto;
+  width: 80%;
+}
+
+.about p{
+  font-size: 22px;
+}

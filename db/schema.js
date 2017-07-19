@@ -18,6 +18,7 @@ var CommentSchema = new mongoose.Schema(
       rentalInfo: String,
       foodInfo: String,
       additionalInfo: String,
+      mainImage: String,
       images: [],
       comments: [CommentSchema]
 
