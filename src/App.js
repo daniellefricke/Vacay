@@ -3,6 +3,7 @@ import axios from 'axios'
 import './App.css';
 import BlogIndex from './components/BlogIndex.js'
 import BlogShow from './components/BlogShow.js'
+import BlogForm from './components/BlogForm.js'
 
 import {
   BrowserRouter as Router,
@@ -16,8 +17,21 @@ class App extends Component{
 constructor(props) {
   super(props)
   this.state = {
-    blogs: []
+    blogs: [],
+    title: '',
+    traveler: '',
+    country: '',
+    when: '',
+    bookingInfo: '',
+    activityInfo: '',
+    rentalInfo: '',
+    foodInfo: '',
+    additionalInfo: '',
+    mainImage: '',
+    images: [],
   }
+  this.handleSubmit = this.handleSubmit.bind(this)
+  this.handleChange = this.handleChange.bind(this)
 }
 
 componentDidMount(){
@@ -28,6 +42,23 @@ componentDidMount(){
           })
         })
       }
+
+      handleChange(e){
+        this.setState({
+          [e.target.name]: e.target.value
+        })
+      }
+
+      handleSubmit = (e) => {
+        e.preventDefault();
+        const {title, traveler, country, when, bookingInfo, activityInfo, rentalInfo, foodInfo, additionalInfo, mainImage, images} = this.state;
+
+        axios.post('http://localhost:4000/api/blogs', {title: title, traveler: traveler, country: country, when: when, bookingInfo: bookingInfo, activityInfo: activityInfo, rentalInfo: rentalInfo, foodInfo: foodInfo, additionalInfo: additionalInfo, mainImage: mainImage, images: images})
+          .then((result)=>{
+            console.log(result);
+          });
+      }
+
       render() {
         return (
           <Router>
@@ -38,8 +69,14 @@ componentDidMount(){
                 </nav>
 
           <div className="main">
-            <Route exact path="/" render={() => <BlogIndex blogs={this.state.blogs} />} />
+            <Route exact path="/" render={() => {
+              return(
+              <BlogIndex handleChange={this.handleChange} handleSubmit={this.handleSubmit} blogs={this.state.blogs} />
+)
+            }}
+            />
             <Route path="/blogs/:id" component={BlogShow} />
+            <Route path="/create" component={BlogForm}/>
           </div>
           <footer>
             <hr className="featurette-divider"/>

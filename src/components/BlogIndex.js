@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Link } from "react-router-dom"
 import './BlogIndex.css'
 
+
 class BlogIndex extends Component {
   render() {
     let blogs = this.props.blogs.map((blog, i)=>{
