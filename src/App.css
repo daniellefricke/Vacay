@@ -23,6 +23,9 @@
   to { transform: rotate(360deg); }
 }
 
+.navClass{
+  padding: 20px;
+}
 .navClass a{
   color: white;
   text-decoration: underline;
@@ -49,4 +52,9 @@ nav{
   display: inline-block;
   text-align: center;
 
+}
+
+footer{
+  background: #5271ff;
+  color: white;
 }

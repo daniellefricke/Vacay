@@ -17,3 +17,12 @@ h2{
   text-align: left;
   padding-bottom: 20px;
 }
+
+.showImgs{
+  margin: auto;
+  text-align: center;
+}
+.showImgs img{
+  display: inline-block;
+  margin: 5px;
+}
