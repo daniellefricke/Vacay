@@ -27,7 +27,9 @@
     3. Create unlimited image uploading with a carousel feature
     4. Create user authentication so users can have profiles that show their blog posts and can be followed  by other users based on where they've gone.
     5. Have a feed for users who follow others that show latest blog posts.
-    
+    6. Add comments so users can ask questions to a traveler
+    7. Full CRUD for users who create blogs. Also add auth to delete comments.
+
 
 
 

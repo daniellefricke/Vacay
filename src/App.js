@@ -10,7 +10,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-
+  Redirect,
 } from 'react-router-dom'
 
 
@@ -30,6 +30,8 @@ class App extends Component{
       additionalInfo: '',
       mainImage: '',
       images: [],
+      hasSubmitted: false,
+      newBlog: {}
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -57,6 +59,10 @@ class App extends Component{
     axios.post('http://localhost:4000/api/blogs', {title: title, traveler: traveler, country: country, when: when, bookingInfo: bookingInfo, activityInfo: activityInfo, rentalInfo: rentalInfo, foodInfo: foodInfo, additionalInfo: additionalInfo, mainImage: mainImage, images: images})
     .then((result)=>{
       console.log(result);
+      this.setState({
+        hasSubmitted: true,
+        newBlog: result.data
+      })
     });
   }
 
@@ -86,9 +92,9 @@ class App extends Component{
         />
 
         <Route exact path="/" render={() => {
-          return(
-            <BlogForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-          )
+          let newBlog = this.state.newBlog
+          return this.state.hasSubmitted ? <Redirect to={{pathname: `/blogs/${this.state.newBlog.title}`, state: {selectedBlog: newBlog}}}/> : <BlogForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+
         }}
       />
 
