@@ -1,27 +1,25 @@
-body{
+
+main{
+  float: right;
+  width: 50%;
+  margin: 2%;
   text-align: center;
+}
+
+.blogContainer{
+  margin: auto;
+  text-align: center;
+  border: 2px solid teal;
+}
+
+a{
+  color: #5271ff
 }
 
 img{
   width: 50%;
 }
 
-.blogcontainer{
-  width: 80%;
-  padding: 20px;
-  border: 2px solid teal;
-  margin: auto;
-}
-
-.blogcontainer a{
-  color: rgb(82,113,255);
-}
-
-.about{
-  margin: auto;
-  width: 80%;
-}
-
-.about p{
-  font-size: 22px;
+p{
+  font-size: 15px;
 }

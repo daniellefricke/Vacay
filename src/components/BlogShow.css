@@ -5,11 +5,17 @@
   border: 2px solid teal;
 }
 
+img{
+  margin: auto;
+}
 h2{
   color: teal;
 }
 
 
+.showImg img{
+  margin: auto;
+}
 
 .blogDetails {
   width: 90%;
@@ -22,6 +28,7 @@ h2{
   margin: auto;
   text-align: center;
 }
+
 .showImgs img{
   display: inline-block;
   margin: 5px;

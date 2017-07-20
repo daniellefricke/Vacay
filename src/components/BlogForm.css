@@ -1,0 +1,31 @@
+
+aside{
+  float: left;
+  width: 40%;
+  margin: 2%;
+}
+
+.blogFormContainer{
+  margin: auto;
+  text-align: left;
+  border: 2px solid teal;
+}
+
+h2{
+  text-align: center;
+}
+
+.blogFormContainer{
+  padding: 5px;
+}
+.blogFormContainer input{
+  padding: 5px;
+  width: 95%;
+}
+label{
+  margin-top: 10px;
+  font-size: 15px;
+}
+button{
+  margin-top: 10px;
+}

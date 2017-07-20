@@ -39,9 +39,10 @@ h2{
   font-family: 'Architects Daughter', cursive;
 }
 
-img{
+.nav_item img{
   width: 300px;
 }
+
 a{
   text-decoration: underline;
   color: teal;
@@ -57,4 +58,6 @@ nav{
 footer{
   background: #5271ff;
   color: white;
+  clear: both;
+  text-align: center;
 }

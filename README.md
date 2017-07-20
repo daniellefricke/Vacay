@@ -1,4 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+#Vacay#
+
+##Purpose##
+    Vacay is a MERN app that's purpose is to provide a platform for individuals to brag about the amazing vacations they've taken without feeling like they need to maintain a full time blog. This is also a great resource for individuals who are planning a vacation to be able to see what others did.
+
+##Technologies##
+    - Front End
+        React, CSS3, HTML5, JavaScript
+    - Back End
+        MongoDB, Express, Node
+
+##Deployment##
+  1. Fork and clone repo
+  2. cd into parent folded
+
+  In the command line:
+  3. Run Mongod
+  4. Run Nodemon
+  5. Run yarn start
+
+  6. Open localhost/3000 if this doesn't deploy with yarn activation
+
+
+##Future Iterations##
+    1. Add a search feature so that people can find specific locations
+    2. Create continent components that divide the blog posts into smaller sections
+    3. Create unlimited image uploading with a carousel feature
+    4. Create user authentication so users can have profiles that show their blog posts and can be followed based on where they've gone.
+
+
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -1760,7 +1791,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
@@ -2135,4 +2166,4 @@ This will only work for locales that have been explicitly imported before.
 
 ## Something Missing?
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md) -->
