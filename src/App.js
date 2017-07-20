@@ -98,7 +98,9 @@ class App extends Component{
 
     <footer>
       <hr className="featurette-divider"/>
+      <div className="footerp">
       <p>Vacay | 2017</p>
+    </div>
     </footer>
   </div>
 </Router>

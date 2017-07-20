@@ -61,3 +61,7 @@ footer{
   clear: both;
   text-align: center;
 }
+
+.footerp p{
+  color: white;
+}

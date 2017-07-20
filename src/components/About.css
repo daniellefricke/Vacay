@@ -6,4 +6,9 @@
 
 .about p{
   font-size: 22px;
+  color: dimgrey;
+}
+
+h2{
+  color: deeppink;
 }

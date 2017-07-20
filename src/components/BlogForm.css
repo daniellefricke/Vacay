@@ -8,7 +8,7 @@ aside{
 .blogFormContainer{
   margin: auto;
   text-align: left;
-  border: 2px solid teal;
+  border: 2px solid orange;
 }
 
 h2{
@@ -20,7 +20,7 @@ h2{
 }
 .blogFormContainer input{
   padding: 5px;
-  width: 95%;
+  width: 98%;
 }
 label{
   margin-top: 10px;
@@ -28,4 +28,12 @@ label{
 }
 button{
   margin-top: 10px;
+}
+
+label, p{
+  color: dimgrey;
+}
+
+textarea{
+  width: 98%;
 }

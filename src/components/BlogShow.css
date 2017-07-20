@@ -5,6 +5,10 @@
   border: 2px solid teal;
 }
 
+.eachBlogShow p{
+  color: dimgrey;
+}
+
 img{
   margin: auto;
 }
