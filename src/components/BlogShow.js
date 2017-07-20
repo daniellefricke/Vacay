@@ -12,6 +12,7 @@ class BlogShow extends Component {
     return (
       <div className="eachBlogShow">
         <h2>{this.state.blog.title}</h2>
+        <div className="showImgs">
         <img src={this.state.blog.mainImage} alt={this.state.blog.title}></img>
         <div className="blogDetails">
           <p><b>Country: </b>{this.state.blog.country}</p>
@@ -22,6 +23,7 @@ class BlogShow extends Component {
           <p><b>Activities: </b>{this.state.blog.activityInfo}</p>
           <p><b>Food:</b> {this.state.blog.foodInfo}</p>
           <p><b>Etc...:</b> {this.state.blog.additionalInfo}</p>
+        </div>
           <div className="showImgs">
           <h2>Some Pics from the trip...</h2>
           <img src={this.state.blog.images[0]} alt={this.state.blog.title}/><br></br>

@@ -25,7 +25,9 @@
     1. Add a search feature so that people can find specific locations
     2. Create continent components that divide the blog posts into smaller sections
     3. Create unlimited image uploading with a carousel feature
-    4. Create user authentication so users can have profiles that show their blog posts and can be followed based on where they've gone.
+    4. Create user authentication so users can have profiles that show their blog posts and can be followed  by other users based on where they've gone.
+    5. Have a feed for users who follow others that show latest blog posts.
+    
 
 
 
