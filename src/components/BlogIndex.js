@@ -1,9 +1,21 @@
 import React, {Component} from 'react'
 import { Link } from "react-router-dom"
 import './BlogIndex.css'
+import BlogForm from './BlogForm.js'
 
 
 class BlogIndex extends Component {
+
+  constructor(props){
+    super(props)
+    console.log(props);
+  }
+
+  componentDidMount(){
+    console.log("on mount");
+    console.log(this.props);
+    this.props.clearSubmit()
+  }
   render() {
     let blogs = this.props.blogs.map((blog, i)=>{
       let pathname = `/blogs/${blog.title}`
@@ -20,6 +32,7 @@ class BlogIndex extends Component {
 
     return(
       <div>
+        <BlogForm handleSubmit={this.props.handleSubmit} handleChange={this.props.handleChange} clearSubmit={this.props.clearSubmit}/>
         <main>
           <h2>Check out where our bloggers have been...</h2>
           <div className='blogContainer'>

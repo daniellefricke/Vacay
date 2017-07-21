@@ -3,13 +3,25 @@ import './BlogShow.css'
 import {Link} from 'react-router-dom'
 
 class BlogShow extends Component {
+
   constructor(props){
     super(props)
+    console.log(props);
+    let stateyPerry = this.props.location
+      ? this.props.location.state.selectedBlog
+      : {}
     this.state = {
-      blog: this.props.location.state.selectedBlog
+      blog: stateyPerry
     }
   }
+
+  componentDidMount(){
+    this.props.clearSubmit()
+  }
+
+
   render() {
+    console.log("BlogShow", this.props);
     return (
       <div>
         <Link to="/">Home</Link>
