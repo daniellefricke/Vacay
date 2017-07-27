@@ -24,7 +24,6 @@ class BlogShow extends Component {
     console.log("BlogShow", this.props);
     return (
       <div>
-        <Link to="/">Home</Link>
 
         <div className="eachBlogShow">
           <h2>{this.state.blog.title}</h2>
@@ -48,6 +47,7 @@ class BlogShow extends Component {
               <img src={this.state.blog.images[3]} alt={this.state.blog.title}/><br></br>
               <img src={this.state.blog.images[4]} alt={this.state.blog.title}/>
             </div>
+            <Link to="/">Home</Link>
           </div>
         </div>
       </div>

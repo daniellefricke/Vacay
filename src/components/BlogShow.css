@@ -8,9 +8,7 @@
 .eachBlogShow p{
   color: dimgrey;
 }
-Link a{
-  text-align: center;
-}
+
 img{
   margin: auto;
 }
@@ -18,6 +16,9 @@ h2{
   color: teal;
 }
 
+.showLink{
+  text-align: center;
+}
 
 .showImg img{
   margin: auto;
