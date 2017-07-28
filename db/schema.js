@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect('mongodb://https://vacay-app-df.herokuapp.com/vacay');
+mongoose.connect('mongodb://vacay-app-df.herokuapp.com/vacay');
 
 var CommentSchema = new mongoose.Schema(
   {
