@@ -39,7 +39,7 @@ class App extends Component{
   }
 
   componentDidMount(){
-    axios.get(`http://localhost:4000/api/blogs`).then((response) => {
+    axios.get(`https://vacay-app-df.herokuapp.com/api/blogs`).then((response) => {
       console.log("App.js response", response.data)
       this.setState({
         blogs: response.data
@@ -64,7 +64,7 @@ class App extends Component{
     e.preventDefault();
     const {title, traveler, country, when, bookingInfo, activityInfo, rentalInfo, foodInfo, additionalInfo, mainImage, images} = this.state;
 
-    axios.post('http://localhost:4000/api/blogs', {title: title, traveler: traveler, country: country, when: when, bookingInfo: bookingInfo, activityInfo: activityInfo, rentalInfo: rentalInfo, foodInfo: foodInfo, additionalInfo: additionalInfo, mainImage: mainImage, images: images})
+    axios.post('https://vacay-app-df.herokuapp.com/api/blogs', {title: title, traveler: traveler, country: country, when: when, bookingInfo: bookingInfo, activityInfo: activityInfo, rentalInfo: rentalInfo, foodInfo: foodInfo, additionalInfo: additionalInfo, mainImage: mainImage, images: images})
     .then((result)=>{
       console.log("axios", result);
       this.setState({
